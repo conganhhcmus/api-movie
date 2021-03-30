@@ -1,0 +1,32 @@
+{
+    "create": {
+        "required": [
+            "country"
+        ],
+        "additionalProperties": false,
+        "properties": {
+            "country": {
+                "type": "string"
+            }
+        }
+    },
+    "update": {
+        "additionalProperties": false,
+        "properties": {
+            "country": {
+                "type": "string"
+            }
+        }
+    },
+    "updateFull": {
+        "required": [
+            "country"
+        ],
+        "additionalProperties": false,
+        "properties": {
+            "country": {
+                "type": "string"
+            }
+        }
+    }
+}

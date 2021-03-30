@@ -1,0 +1,32 @@
+{
+    "create": {
+        "required": [
+            "name"
+        ],
+        "additionalProperties": false,
+        "properties": {
+            "name": {
+                "type": "string"
+            }
+        }
+    },
+    "update": {
+        "additionalProperties": false,
+        "properties": {
+            "name": {
+                "type": "string"
+            }
+        }
+    },
+    "updateFull": {
+        "required": [
+            "name"
+        ],
+        "additionalProperties": false,
+        "properties": {
+            "name": {
+                "type": "string"
+            }
+        }
+    }
+}

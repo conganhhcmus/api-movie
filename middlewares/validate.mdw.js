@@ -4,7 +4,7 @@ module.exports = (schema) => (req, res, next) => {
     //check data is empty
     const data = req.body;
     if (Object.keys(data).length === 0) {
-        return res.status(400).end();
+        return res.status(400).json({ object: "is empty" });
     }
     //check schema data
     const ajv = new Ajv({ strict: false });

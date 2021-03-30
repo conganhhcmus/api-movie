@@ -16,6 +16,8 @@ app.use("/api/films", require("./routes/film.route"));
 app.use("/api/actors", require("./routes/actor.route"));
 app.use("/api/countries", require("./routes/country.route"));
 app.use("/api/cities", require("./routes/city.route"));
+app.use("/api/categories", require("./routes/category.route"));
+
 
 app.listen(envConfig.PORT, function () {
     console.log(`API is running at http://localhost:${envConfig.PORT}`);

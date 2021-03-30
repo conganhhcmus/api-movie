@@ -1,10 +1,15 @@
 const Ajv = require("ajv").default;
 
 module.exports = (schema) => (req, res, next) => {
-    const ajv = new Ajv({strict: false});
+    //check data is empty
+    const data = req.body;
+    if (Object.keys(data).length === 0) {
+        return res.status(400).end();
+    }
+    //check schema data
+    const ajv = new Ajv({ strict: false });
     const validate = ajv.compile(schema);
-    const valid = validate(req.body);
-
+    const valid = validate(data);
     if (!valid) {
         return res.status(400).json(validate.errors);
     }

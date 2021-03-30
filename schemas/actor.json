@@ -1,0 +1,43 @@
+{
+    "create": {
+        "required": [
+            "first_name",
+            "last_name"
+        ],
+        "additionalProperties": false,
+        "properties": {
+            "first_name": {
+                "type": "string"
+            },
+            "last_name": {
+                "type": "string"
+            }
+        }
+    },
+    "update": {
+        "additionalProperties": false,
+        "properties": {
+            "first_name": {
+                "type": "string"
+            },
+            "last_name": {
+                "type": "string"
+            }
+        }
+    },
+    "updateFull": {
+        "required": [
+            "first_name",
+            "last_name"
+        ],
+        "additionalProperties": false,
+        "properties": {
+            "first_name": {
+                "type": "string"
+            },
+            "last_name": {
+                "type": "string"
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+{
+    "create": {
+        "required": [
+            "title",
+            "language_id",
+            "release_year"
+        ],
+        "additionalProperties": false,
+        "properties": {
+            "title": {
+                "type": "string"
+            },
+            "language_id": {
+                "type": "integer"
+            },
+            "release_year": {
+                "type": "integer"
+            }
+        }
+    },
+    "update": {
+        "additionalProperties": false,
+        "properties": {
+            "title": {
+                "type": "string"
+            },
+            "description": {
+                "type": "string"
+            },
+            "release_year": {
+                "type": "integer"
+            },
+            "language_id": {
+                "type": "integer"
+            },
+            "original_language_id": {
+                "type": "integer"
+            },
+            "rental_duration": {
+                "type": "integer"
+            },
+            "rental_rate": {
+                "type": "string"
+            },
+            "length": {
+                "type": "integer"
+            },
+            "replacement_cost": {
+                "type": "string"
+            },
+            "rating": {
+                "type": "string"
+            },
+            "special_features": {
+                "type": "string"
+            }
+        }
+    },
+    "updateFull": {
+        "required": [
+            "title",
+            "description",
+            "release_year",
+            "language_id",
+            "original_language_id",
+            "rental_duration",
+            "rental_rate",
+            "length",
+            "replacement_cost",
+            "rating",
+            "special_features"
+        ],
+        "additionalProperties": false,
+        "properties": {
+            "title": {
+                "type": "string"
+            },
+            "description": {
+                "type": "string"
+            },
+            "release_year": {
+                "type": "integer"
+            },
+            "language_id": {
+                "type": "integer"
+            },
+            "original_language_id": {
+                "type": "integer"
+            },
+            "rental_duration": {
+                "type": "integer"
+            },
+            "rental_rate": {
+                "type": "string"
+            },
+            "length": {
+                "type": "integer"
+            },
+            "replacement_cost": {
+                "type": "string"
+            },
+            "rating": {
+                "type": "string"
+            },
+            "special_features": {
+                "type": "string"
+            }
+        }
+    }
+}

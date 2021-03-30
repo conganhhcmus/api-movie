@@ -24,4 +24,12 @@ module.exports = {
     delete(id) {
         return db("city").where("city_id", id).del();
     },
+
+    async findByCountryId(countryId) {
+        const cities = await db("city").where("country_id", countryId);
+        if (cities.length === 0) {
+            return null;
+        }
+        return cities[0];
+    },
 };

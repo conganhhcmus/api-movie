@@ -2,10 +2,13 @@ const express = require("express");
 const morgan = require("morgan");
 const envConfig = require("./config/env.config");
 require("express-async-errors");
+const cors = require('cors');
+
 
 const app = express();
 app.use(morgan("dev"));
 app.use(express.json());
+app.use(cors());
 
 app.get("/", function (req, res) {
     res.json({

@@ -5,7 +5,7 @@
             "language_id",
             "release_year"
         ],
-        "additionalProperties": false,
+        "additionalProperties": true,
         "properties": {
             "title": {
                 "type": "string"

@@ -41,4 +41,13 @@ module.exports = {
         }
         res.status(202).json({ success: true });
     },
+
+    deleteMultiple: async function (req, res) {
+        const actors = req.body;
+        const ans = await actorModel.deleteMultiple(actors.id);
+        if (ans === 0) {
+            return res.status(400).json({ success: false });
+        }
+        res.status(202).json({ success: true });
+    },
 };

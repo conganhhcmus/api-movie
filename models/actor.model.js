@@ -24,4 +24,7 @@ module.exports = {
     delete(id) {
         return db("actor").where("actor_id", id).del();
     },
+    deleteMultiple(actors) {
+        return db("actor").whereIn("actor_id", actors).del();
+    },
 };

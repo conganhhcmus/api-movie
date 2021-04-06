@@ -13,6 +13,7 @@ router.post(
     actorController.create
 );
 router.delete("/:id", actorController.delete);
+router.delete("/", actorController.deleteMultiple);
 router.put(
     "/:id",
     require("../middlewares/validate.mdw")(schema.updateFull),

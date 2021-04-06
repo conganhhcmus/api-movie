@@ -41,4 +41,13 @@ module.exports = {
         }
         res.json(film);
     },
+
+    deleteMultiple: async function (req, res) {
+        const films = req.body;
+        const ans = await filmModel.deleteMultiple(films.id);
+        if (ans === 0) {
+            return res.status(400).json({ success: false });
+        }
+        res.status(202).json({ success: true });
+    },
 };

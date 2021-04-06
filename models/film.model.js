@@ -23,5 +23,9 @@ module.exports = {
 
     update(id, film) {
         return db("film").where("film_id", id).update(film);
-    }
+    },
+
+    deleteMultiple(films) {
+        return db("film").whereIn("film_id", films).del();
+    },
 };

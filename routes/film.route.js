@@ -17,6 +17,8 @@ router.post(
 
 router.delete("/:id", filmController.delete);
 
+router.delete("/", filmController.deleteMultiple);
+
 router.patch(
     "/:id",
     require("../middlewares/validate.mdw")(schema.update),
